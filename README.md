@@ -45,4 +45,4 @@ This application is currently extended with the following plugins. Instructions 
 
 | Package | Documentation |
 | ------ | ------ |
-| ngx-Translate | http://www.ngx-translate.com/ |
+| ngx-translate | http://www.ngx-translate.com/ |
