@@ -1,13 +1,70 @@
 <ion-header>
     <ion-navbar>
-        <ion-title>Translate</ion-title>
+        <ion-title>{{ title }}</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-    The world is your oyster.
-    <p>
-        If you get lost, the
-        <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-    </p>
+    <ion-card>
+
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="./../../../assets/images/avatars/marty-mcfly.jpg">
+            </ion-avatar>
+            <h2>{{ userPublisher }}</h2>
+            <p>{{ 'November' | translate }} 5, 1955</p>
+        </ion-item>
+
+        <img src="./../../../assets/images/cards/back-to-the-future-delorean.jpg">
+
+        <ion-card-content>
+            <p>{{ 'WaitMinute' | translate: docEmmettBrown }}</p>
+        </ion-card-content>
+
+        <ion-row>
+            <ion-col>
+                <button ion-button icon-start clear small>
+                    <ion-icon name="thumbs-up"></ion-icon>
+                    <div>12 {{ 'Likes' | translate }}</div>
+                </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button icon-start clear small>
+                    <ion-icon name="text"></ion-icon>
+                    <div>4 {{ 'Comments' | translate }}</div>
+                </button>
+            </ion-col>
+        </ion-row>
+
+    </ion-card>
+
+    <p [innerHTML]="'Romans.1136' | translate"></p>
+
 </ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+
+        <ion-buttons left>
+            <p [innerHTML]="'ToGod' | translate"></p>
+        </ion-buttons>
+
+        <ion-buttons right>
+            {{ 'SelectLanguage' | translate }}:
+            <div class="flags">
+                <button ion-button icon-only (click)="onSetLanguage('pt-br')">
+                    <img src="./../../../assets/images/flags/brazil.png">
+                </button>
+
+                <button ion-button icon-only (click)="onSetLanguage('es-es')">
+                    <img src="./../../../assets/images/flags/spain.png">
+                </button>
+
+                <button ion-button icon-only (click)="onSetLanguage('en-us')">
+                    <img src="./../../../assets/images/flags/united_states_of_america_usa.png">
+                </button>
+            </div>
+        </ion-buttons>
+
+    </ion-toolbar>
+</ion-footer>

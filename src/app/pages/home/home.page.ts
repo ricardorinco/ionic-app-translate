@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'page-home',
@@ -8,6 +8,19 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-    constructor(public navController: NavController) { }
+    public docEmmettBrown = { value: 'Doc' };
+    public title;
+    public userPublisher: string = 'Marty McFly';
+
+    constructor(private translate: TranslateService) {
+        this.onSetLanguage('en-us');
+    }
+
+    public onSetLanguage(languague: string) {
+        this.translate.use(languague);
+        this.translate.get('Home.Title').subscribe((translate: string) => this.title = translate);
+
+        console.log('Browser languague:', this.translate.getBrowserLang());
+    }
 
 }

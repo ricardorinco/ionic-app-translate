@@ -1,0 +1,14 @@
+{
+    "Comments": "Comentarios",
+    "Home": {
+        "Title": "Traducción"
+    },
+    "Likes": "Afectos",
+    "November": "Noviembre",
+    "Romans": {
+        "1136": "\"Porque de él, y por él, y en él, son todas las cosas. A él sea gloria por siglos. Amén.\" <strong>Romanos 11:36<strong>"
+    },
+    "SelectLanguage": "Seleccione el idioma",
+    "ToGod": "☝️ Para <b>Dios</b>",
+    "WaitMinute": "Espera un minuto. Espera un minuto, {{ value }}. Uhhh... ¿Me estás diciendo que construiste una máquina del tiempo... de un DeLorean? Whoa. Esto es pesado."
+}
