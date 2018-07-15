@@ -18,7 +18,7 @@ Install the dependencies and start the application.
 ### root
 
 ```sh
-    cd viacep
+    cd ionic-app-translate
 ```
 
 ### dependencies
